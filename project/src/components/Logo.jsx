@@ -11,7 +11,7 @@ const Logo = ({ size = 'md', variant = 'light' }) => {
 
   return (
     <a href="#home" className="flex items-center space-x-3 group transition-transform duration-200 hover:scale-[1.02]">
-      <div className={`${sizeClasses.img} rounded-xl overflow-hidden shadow-md group-hover:shadow-lg transition-all duration-300 ring-2 ring-emerald-500/20 flex-shrink-0 bg-white p-0.5`}>
+      <div className={`${sizeClasses.img} rounded-xl overflow-hidden shadow-md group-hover:shadow-lg transition-all duration-300 ring-2 ring-primary-600/30 flex-shrink-0 bg-white p-0.5`}>
         <img 
           src="/logo.jpg" 
           alt="ADE-HI Integrated Farm Logo" 
@@ -19,18 +19,20 @@ const Logo = ({ size = 'md', variant = 'light' }) => {
           onError={(e) => {
             // Fallback SVG if image fails to load
             e.target.style.display = 'none';
-            e.target.nextSibling.style.display = 'flex';
+            if (e.target.nextSibling) {
+              e.target.nextSibling.style.display = 'flex';
+            }
           }}
         />
-        <div className="hidden w-full h-full bg-emerald-700 text-white font-bold flex items-center justify-center rounded-lg text-sm">
+        <div className="hidden w-full h-full bg-primary-600 text-white font-bold flex items-center justify-center rounded-lg text-sm">
           AH
         </div>
       </div>
       <div className="flex flex-col">
-        <span className={`font-extrabold tracking-tight ${sizeClasses.title} ${isDark ? 'text-white' : 'text-gray-900'} group-hover:text-emerald-600 transition-colors`}>
+        <span className={`font-extrabold tracking-tight ${sizeClasses.title} ${isDark ? 'text-white' : 'text-gray-900'} group-hover:text-primary-600 transition-colors`}>
           ADE-HI
         </span>
-        <span className={`font-semibold tracking-wider uppercase ${sizeClasses.subtitle} ${isDark ? 'text-emerald-200/90' : 'text-emerald-700'}`}>
+        <span className={`font-semibold tracking-wider uppercase ${sizeClasses.subtitle} ${isDark ? 'text-rose-200' : 'text-primary-600'}`}>
           Integrated Farm Ltd
         </span>
       </div>
