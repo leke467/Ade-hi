@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Facebook, Instagram, Twitter } from 'lucide-react'
+import Logo from './Logo'
 
 const Footer = () => {
   return (
@@ -7,14 +8,8 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-secondary-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-xl">AH</span>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold">ADE-HI</h3>
-                <p className="text-red-200">Integrated Farm Limited</p>
-              </div>
+            <div className="mb-6">
+              <Logo size="md" variant="dark" />
             </div>
             <p className="text-red-100 leading-relaxed mb-6 max-w-md">
               Your trusted partner for premium quality livestock. We specialize in raising 

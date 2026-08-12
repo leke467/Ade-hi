@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Menu, X, Phone, Mail } from 'lucide-react'
+import Logo from './Logo'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -16,15 +17,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto section-padding">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-xl">AH</span>
-            </div>
-            <div>
-              <h1 className="text-xl font-bold text-gray-900">ADE-HI</h1>
-              <p className="text-sm text-gray-600">Integrated Farm Limited</p>
-            </div>
-          </div>
+          <Logo size="md" variant="light" />
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
